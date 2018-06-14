@@ -5,6 +5,7 @@ module.exports = function () {
         return $.gulp.src($.config.src+'/styles/*.scss')
         .pipe($.gp.sourcemaps.init())
         .pipe($.gp.sass())
+        .pipe($.gp.sassGlob())
         .on('error', $.gp.notify.onError(function(error){
             return {
                 title : 'Sasss',

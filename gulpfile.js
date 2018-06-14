@@ -3,10 +3,10 @@
 global.$ = {
     package     : require('./package.json'),
     config      : require('./gulp/config'),
-    path: {
-        task : require('./gulp/paths/tasks.js'),
-        jsFoundation: require('./gulp/paths/js.foundation.js'),
-        cssFoundation: require('./gulp/paths/css.foundation.js')
+    path        : {
+                task : require('./gulp/paths/tasks.js'),
+                jsFoundation: require('./gulp/paths/js.foundation.js'),
+                cssFoundation: require('./gulp/paths/css.foundation.js')
     },
     gulp        : require('gulp'),
     del         : require('del'),
