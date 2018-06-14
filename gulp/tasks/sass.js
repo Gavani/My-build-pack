@@ -2,10 +2,10 @@
 
 module.exports = function () {
     $.gulp.task('sass:dev', function() {
-        return $.gulp.src($.config.src+'/styles/*.scss')
+        return $.gulp.src($.config.src+'/styles/app.scss')
         .pipe($.gp.sourcemaps.init())
-        .pipe($.gp.sass())
         .pipe($.gp.sassGlob())
+        .pipe($.gp.sass())
         .on('error', $.gp.notify.onError(function(error){
             return {
                 title : 'Sasss',
@@ -23,7 +23,8 @@ module.exports = function () {
     });
 
     $.gulp.task('sass:build', function() {
-        return $.gulp.src($.config.src+'/styles/*.scss')
+        return $.gulp.src($.config.src+'/styles/app.scss')
+        .pipe($.gp.sassGlob())
         .pipe($.gp.sass())
         .pipe($.gp.autoprefixer(
             $.config.browsers
