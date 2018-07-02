@@ -15,7 +15,7 @@ module.exports = function () {
         .pipe($.gp.autoprefixer(
             $.config.browsers
         ))
-        .pipe(cssunit({
+        .pipe($.cssunit({
             type     :    'px-to-rem',
             rootSize :    16
         }))
@@ -33,7 +33,7 @@ module.exports = function () {
         .pipe($.gp.autoprefixer(
             $.config.browsers
         ))
-        .pipe(cssunit({
+        .pipe($.cssunit({
             type     :    'px-to-rem',
             rootSize :    16
         }))
