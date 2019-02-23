@@ -1,4 +1,4 @@
-include mixins/mixins
+block variables
 
 
 <!DOCTYPE html>
@@ -7,8 +7,11 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title
-            block title
+        title= title
+        link(rel="stylesheet", href="./assets/styles/foundation.css")
+        link(rel="stylesheet", href="./assets/styles/app.css")
     body
         .wrapper
-            .block content
+            block content
+        script(src="./assets/js/foundation.js")
+        script(src="./assets/js/app.js")
