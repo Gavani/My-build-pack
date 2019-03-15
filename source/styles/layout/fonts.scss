@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'lemonmilkregular';
+  src: url('../fonts/lemonmilk-webfont.woff2') format('woff2'),
+       url('../fonts/lemonmilk-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'lemonmilk_lightregular';
+  src: url('../fonts/lemonmilklight-webfont.woff2') format('woff2'),
+       url('../fonts/lemonmilklight-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@mixin lemon($style: regular){
+  @if $style == regular {
+    font-family: 'lemonmilkregular', Arial, Helvetica, sans-serif;
+  }
+  @if $style == light {
+    font-family: 'lemonmilk_lightregular', Arial, Helvetica, sans-serif;
+  }
+}
+
+
+
+@font-face {
+  font-family: 'robotobold';
+  src: url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
+       url('../fonts/roboto-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'robotolight';
+  src: url('../fonts/roboto-light-webfont.woff2') format('woff2'),
+       url('../fonts/roboto-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@mixin roboto($style: light){
+  @if $style == bold {
+    font-family: 'robotobold', Arial, Helvetica, sans-serif;
+  }
+  @if $style == light {
+    font-family: 'robotolight', Arial, Helvetica, sans-serif;
+  }
+}
+
+
+
+@font-face {
+  font-family: 'freightbig_book_italic';
+  src: url('../fonts/freight_big_book_italic-webfont.woff2') format('woff2'),
+       url('../fonts/freight_big_book_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@mixin freight{
+  font-family: 'freightbig_book_italic', Arial, Helvetica, sans-serif;
+}
